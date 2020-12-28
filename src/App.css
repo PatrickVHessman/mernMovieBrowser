@@ -1,5 +1,10 @@
+body {
+  background: #eee;
+  padding: 20px;
+}
+
 .App {
-  text-align: center;
+  
 }
 
 .App-logo {
@@ -28,6 +33,63 @@
   color: #61dafb;
 }
 
+/* Search Queries */
+.formBox {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.formBox input, .formBox label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.movieContainer {
+  /* -webkit-column-count: 3; */
+    -webkit-column-gap: 10px;
+    -webkit-column-fill: auto;
+    /* -moz-column-count: 3; */
+    -moz-column-gap: 10px;
+    -moz-column-fill: auto;
+    /* column-count: 4; */
+    grid-column-gap: 5px;
+    -webkit-column-gap: 5px;
+    column-gap: 5px;
+    column-fill: auto;
+}
+
+.movieContainer .react-reveal {
+    -webkit-column-break-inside: avoid;
+    -moz-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid-column;
+  }
+
+.movieEntry {
+  /* display: flex; */
+  -webkit-column-break-inside: avoid;
+  -moz-column-break-inside: avoid;
+    border: 1px black solid;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background: #fff;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    font-size: .9em;
+}
+
+.movieCell {
+  display: inline-block;
+  padding: 10px;;
+}
+
+.movieEntry img {
+  max-width: 200px;
+  margin: auto;
+  display: block;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -35,4 +97,20 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* Loading Spinner */
+.loader {
+  border: 16px solid #f3f3f3; /* Light grey */
+  border-top: 16px solid rgba(86, 87, 88, 1);
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+  margin: auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
